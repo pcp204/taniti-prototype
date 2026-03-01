@@ -7,186 +7,163 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">Visit Taniti</div>
-    <nav class="nav">
-      <a href="#home">Home</a>
-      <a href="#things">Things To Do</a>
-      <a href="#stay">Stay</a>
-      <a href="#transport">Getting Around</a>
-      <a href="#faq">FAQ</a>
-      <button class="primary" id="openBook">Book Now</button>
-    </nav>
-  </header>
 
-  <main>
-    <section id="home" class="section hero">
-      <h1>Plan a trip to Taniti</h1>
-      <p>A simple tourism site prototype (student UX project).</p>
-      <div class="row">
-        <a class="primary linkbtn" href="#things">Explore Things To Do</a>
-        <button class="secondary" id="openBook2">Request Booking</button>
-      </div>
+<header class="topbar">
+  <div class="brand">Visit Taniti</div>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#things">Things To Do</a>
+    <a href="#stay">Stay</a>
+    <a href="#transport">Getting Around</a>
+    <a href="#faq">FAQ</a>
+    <button class="primary" id="openBook">Book Now</button>
+  </nav>
+</header>
 
-      <div class="cards">
-        <a class="card" href="#things">Beaches</a>
-        <a class="card" href="#things">Rainforest</a>
-        <a class="card" href="#things">Volcano</a>
-        <a class="card" href="#stay">Lodging</a>
-        <a class="card" href="#transport">Transportation</a>
-        <a class="card" href="#faq">FAQ</a>
-      </div>
-    </section>
+<main>
 
-    <section id="things" class="section">
-      <h2>Things To Do</h2>
-      <p>Use filters to browse quickly.</p>
+<section id="home" class="section hero">
+  <h1>Plan a trip to Taniti</h1>
+  <p>A simple tourism site prototype (student UX project).</p>
 
-      <div class="filters">
-        <button class="chip" data-filter="all">All</button>
-        <button class="chip" data-filter="beach">Beach</button>
-        <button class="chip" data-filter="rainforest">Rainforest</button>
-        <button class="chip" data-filter="volcano">Volcano</button>
-        <button class="chip" data-filter="city">City / Nightlife</button>
-      </div>
-
-      <div class="grid" id="activityGrid">
-        <article class="tile" data-type="beach">
-          <h3>Yellow Leaf Bay Beaches</h3>
-          <p>Relax at sandy beaches near Taniti City.</p>
-          <div class="row">
-            <button class="details" data-details="beach1">Details</button>
-            <button class="primary book" data-choice="Yellow Leaf Bay Beaches">Book</button>
-          </div>
-        </article>
-
-        <article class="tile" data-type="rainforest">
-          <h3>Rainforest Zip-lining</h3>
-          <p>Guided zip-line experience in the rainforest.</p>
-          <div class="row">
-            <button class="details" data-details="rain1">Details</button>
-            <button class="primary book" data-choice="Rainforest Zip-lining">Book</button>
-          </div>
-        </article>
-
-        <article class="tile" data-type="volcano">
-          <h3>Volcano Day Tour</h3>
-          <p>Visit Taniti’s mountainous interior and active volcano area.</p>
-          <div class="row">
-            <button class="details" data-details="vol1">Details</button>
-            <button class="primary book" data-choice="Volcano Day Tour">Book</button>
-          </div>
-        </article>
-
-        <article class="tile" data-type="city">
-          <h3>Merriton Landing Night Out</h3>
-          <p>Pubs, microbrewery, and a dance club area.</p>
-          <div class="row">
-            <button class="details" data-details="city1">Details</button>
-            <button class="primary book" data-choice="Merriton Landing Night Out">Book</button>
-          </div>
-        </article>
-      </div>
-
-      <div class="detailsBox" id="detailsBox" hidden>
-        <h3 id="detailsTitle">Details</h3>
-        <p id="detailsText"></p>
-        <button class="secondary" id="closeDetails">Close</button>
-      </div>
-    </section>
-
-    <section id="stay" class="section">
-      <h2>Stay</h2>
-      <ul>
-        <li>Hostel (budget)</li>
-        <li>Family-owned hotels</li>
-        <li>Bed & Breakfasts</li>
-        <li>One large four-star resort</li>
-      </ul>
-      <button class="primary" id="openBook3">Request Lodging Info</button>
-    </section>
-
-    <section id="transport" class="section">
-      <h2>Getting Around</h2>
-      <h3>Arriving</h3>
-      <ul>
-        <li>Most visitors arrive by air (small airport).</li>
-        <li>Some arrive by cruise ship (limited docking schedule).</li>
-      </ul>
-      <h3>On the island</h3>
-      <ul>
-        <li>Public buses in Taniti City (5 a.m.–11 p.m.).</li>
-        <li>Private buses outside the city.</li>
-        <li>Taxis in Taniti City.</li>
-        <li>Rental cars near the airport.</li>
-        <li>Bikes/helmets available (helmets required).</li>
-      </ul>
-    </section>
-
-    <section id="faq" class="section">
-      <h2>FAQ</h2>
-      <details>
-        <summary>What power outlets are used?</summary>
-        <p>120 volts (same as the United States).</p>
-      </details>
-      <details>
-        <summary>What currency is used?</summary>
-        <p>U.S. dollars are used. Many businesses also accept euros and yen, and credit cards are common.</p>
-      </details>
-      <details>
-        <summary>Is Taniti safe?</summary>
-        <p>Violent crime is rare, but visitors should watch for pickpocketing as tourism grows.</p>
-      </details>
-    </section>
-  </main>
-
-  <div class="modal" id="bookModal" hidden>
-    <div class="modalCard">
-      <h2>Request Booking</h2>
-      <p>This prototype collects a request (not a real booking system).</p>
-
-      <form id="bookForm">
-        <label>
-          Booking type
-          <select name="type" required>
-            <option value="tour">Tour / Activity</option>
-            <option value="lodging">Lodging</option>
-            <option value="transport">Transportation</option>
-          </select>
-        </label>
-
-        <label>
-          Choice / Activity
-          <input name="choice" id="choiceField" placeholder="e.g., Volcano Day Tour" />
-        </label>
-
-        <label>
-          Date
-          <input type="date" name="date" required />
-        </label>
-
-        <label>
-          Party size
-          <input type="number" name="party" min="1" max="12" value="2" required />
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" placeholder="you@example.com" required />
-        </label>
-
-        <div class="row">
-          <button class="primary" type="submit">Submit Request</button>
-          <button class="secondary" type="button" id="closeBook">Cancel</button>
-        </div>
-      </form>
-
-      <p class="success" id="successMsg" hidden>
-        Request sent! (Prototype) — A real site would confirm pricing and availability.
-      </p>
-    </div>
+  <div class="row">
+    <a class="primary linkbtn" href="#things">Explore Things To Do</a>
+    <button class="secondary" id="openBook2">Request Booking</button>
   </div>
 
-  <script src="script.js"></script>
+  <div class="cards">
+    <a class="card" href="#things">Beaches</a>
+    <a class="card" href="#things">Rainforest</a>
+    <a class="card" href="#things">Volcano</a>
+    <a class="card" href="#stay">Lodging</a>
+    <a class="card" href="#transport">Transportation</a>
+    <a class="card" href="#faq">FAQ</a>
+  </div>
+</section>
+
+
+<section id="things" class="section">
+  <h2>Things To Do</h2>
+
+  <div class="grid" id="activityGrid">
+
+    <article class="tile">
+      <h3>Yellow Leaf Bay Beaches</h3>
+      <p>Relax at sandy beaches near Taniti City.</p>
+      <button class="primary book">Book</button>
+    </article>
+
+    <article class="tile">
+      <h3>Rainforest Zip-lining</h3>
+      <p>Guided zip-line experience.</p>
+      <button class="primary book">Book</button>
+    </article>
+
+    <article class="tile">
+      <h3>Volcano Day Tour</h3>
+      <p>Visit Taniti volcano area.</p>
+      <button class="primary book">Book</button>
+    </article>
+
+  </div>
+</section>
+
+
+<section id="stay" class="section">
+  <h2>Stay</h2>
+  <ul>
+    <li>Hostel</li>
+    <li>Hotels</li>
+    <li>Bed & Breakfast</li>
+    <li>Resort</li>
+  </ul>
+
+  <button class="primary" id="openBook3">Request Lodging Info</button>
+</section>
+
+
+<section id="transport" class="section">
+  <h2>Getting Around</h2>
+  <ul>
+    <li>Bus</li>
+    <li>Taxi</li>
+    <li>Rental Car</li>
+    <li>Bicycle</li>
+  </ul>
+</section>
+
+
+<section id="faq" class="section">
+  <h2>FAQ</h2>
+
+  <p>Currency: US Dollars</p>
+  <p>Power: 120V US outlets</p>
+  <p>Crime: Very low</p>
+
+</section>
+
+</main>
+
+
+
+<!-- MODAL -->
+
+<div class="modal" id="bookModal" hidden>
+
+  <div class="modalCard">
+
+    <h2>Request Booking</h2>
+
+    <form id="bookForm">
+
+      <label>
+        Type
+        <select>
+          <option>Tour</option>
+          <option>Lodging</option>
+          <option>Transport</option>
+        </select>
+      </label>
+
+      <label>
+        Date
+        <input type="date">
+      </label>
+
+      <label>
+        Party Size
+        <input type="number">
+      </label>
+
+      <label>
+        Email
+        <input type="email">
+      </label>
+
+      <div class="row">
+
+        <button class="primary" type="submit">
+          Submit
+        </button>
+
+        <button
+          class="secondary"
+          type="button"
+          onclick="document.getElementById('bookModal').hidden=true;"
+        >
+          Cancel
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
